@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <div class="one_blog">
+    <ul class='no_dot_list'>
+      <li><h4><%= @blog.title %></4> </li>
+      <li class="blog_body"> <%= @blog.body %> </li>
+      <li class="time_submitted">Submited <%= time_ago_in_words(@blog.created_at)%> ago.</li>
+    </ul>
+  </div>
+
+  </body>
+</html>

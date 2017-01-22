@@ -9,11 +9,15 @@ class BlogsController < ApplicationController
   end
 
   def create
-    Blog.new(blog_parmas)
+    @blog = Blog.new(blog_params)
+    @blog.save
+
+    redirect_to @blog
   end
 
-
-
+  def show
+    @blog = Blog.find(params[:id])
+  end
 
   private
 

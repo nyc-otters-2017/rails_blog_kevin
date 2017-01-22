@@ -5,10 +5,17 @@
     <title>This is the blog index</title>
   </head>
   <body>
-    
+
     <h3>All Blogs</h3>
     <% @blogs.each do |blog| %>
-      <p><%= blog.body %></p>
+    <div class="one_blog">
+      <ul class="no_dot_list">
+        <li><h4> <a href="/blogs/<%=blog.id%>"><%= blog.title %></a></h4></li>
+        <li> <%= blog.body %> </li>
+        <li>Created <%= time_ago_in_words(blog.created_at) %> ago.</li>
+        <br>
+      </ul>
+    </div>
     <% end %>
 
   </body>
