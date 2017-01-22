@@ -9,11 +9,36 @@ class BlogsController < ApplicationController
   end
 
   def create
-    Blog.new(blog_parmas)
+    @blog = Blog.new(blog_params)
+    @blog.save
+
+    redirect_to @blog
   end
 
+  def show
+    @blog = Blog.find(params[:id])
+  end
 
+  def edit
+    @blog = Blog.find(params[:id])
+    # @errors = @blog.errors.full_message
+  end
 
+  def update
+    # debugger
+    @blog = Blog.find(params[:id])
+    if @blog.update(blog_params)
+      redirect_to action: 'show', id: @blog.id
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @blog = Blog.find(params[:id])
+    @blog.destroy
+    redirect_to root_path
+  end
 
   private
 
