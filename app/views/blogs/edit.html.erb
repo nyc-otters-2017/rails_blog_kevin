@@ -5,8 +5,8 @@
     <title></title>
   </head>
   <body>
-    <form class="" action="/blogs/<%=@blog.id%>" method="put">
-
+    <form class="" action="/blogs/<%=@blog.id%>" method="post">
+      <input type="hidden" name="_method" value="put">
       <input type="text" name="blog[title]" value="" placeholder="<%= @blog.title %>">
       <input type="text" name="blog[body]" value="" placeholder="<%= @blog.body %>">
       <input type="submit" name="" value="Update">

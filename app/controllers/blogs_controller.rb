@@ -20,11 +20,12 @@ class BlogsController < ApplicationController
   end
 
   def edit
-    @errors = @blog.errors.full_message
     @blog = Blog.find(params[:id])
+    # @errors = @blog.errors.full_message
   end
 
   def update
+    # debugger
     @blog = Blog.find(params[:id])
     if @blog.update(blog_params)
       redirect_to action: 'show', id: @blog.id
@@ -32,6 +33,7 @@ class BlogsController < ApplicationController
       render 'edit'
     end
   end
+
   def destroy
     @blog = Blog.find(params[:id])
     @blog.destroy

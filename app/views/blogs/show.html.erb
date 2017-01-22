@@ -5,18 +5,26 @@
     <title></title>
   </head>
   <body>
-  <div class="one_blog">
+
+  <div class="blog_full">
     <ul class='no_dot_list'>
       <li><h4><%= @blog.title %></4> </li>
+
       <li class="blog_body"> <%= @blog.body %> </li>
-      <li><a href="/blogs/<%=@blog.id%>/edit">Edit</a></li>
-      <li class="time_submitted"><%=@blog.submitted%> <%= time_ago_in_words(@blog.created_at)%> ago.</li>
+
+      <div class="time_submitted">
+        <p class="home_links"> <%=@blog.submitted%> <%= time_ago_in_words(@blog.created_at)%> ago. </p>
+        <p class="home_links"><a href="/blogs/<%=@blog.id%>/edit">Edit</a></p>
+        <p class="home_links"> <%= link_to 'Destroy', [@blog],
+        method: :delete,
+        class: 'button',
+        data: { confirm: 'Are you sure?' } %> </p>
+      </div>
+
     </ul>
-    <p> <%= link_to 'Destroy', [@blog],
-                      method: :delete,
-                      class: 'button',
-                      data: { confirm: 'Are you sure?' } %> </p>
   </div>
+
+  <br>
   <% if @errors %>
     <% @errors.each do |error| %>
     <ul>

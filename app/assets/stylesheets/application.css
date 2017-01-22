@@ -13,8 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
 .no_dot_list {
   list-style-type:none;
+
 }
 
 .one_blog {
@@ -22,6 +24,7 @@
   border-style: solid;
   border-bottom-color: rgba(23, 30, 194, 0.8);
   width: 33%;
+
 }
 
 .time_submitted {
@@ -29,13 +32,23 @@ float: right;
 }
 
 .blog_body  {
-  margin-left: 0;
-  width: 75%;
-  background-color: rgba(106, 204, 195, 0.84)
+  /*margin-left: 0;*/
+  /*width: 75%;*/
+  background-color: rgba(106, 204, 195, 0.84);
+  height: 50px;
+
 }
+
+.blog_full{
+  float: left;
+  width: 75%;
+}
+
 .nav_bar {
   float: right;
 }
 .home_links {
-  
+  float: left;
+  margin: 5px;
+  /*border-style: solid;*/
 }
