@@ -12,7 +12,17 @@
       <li><a href="/blogs/<%=@blog.id%>/edit">Edit</a></li>
       <li class="time_submitted"><%=@blog.submitted%> <%= time_ago_in_words(@blog.created_at)%> ago.</li>
     </ul>
+    <p> <%= link_to 'Destroy', [@blog],
+                      method: :delete,
+                      class: 'button',
+                      data: { confirm: 'Are you sure?' } %> </p>
   </div>
-
+  <% if @errors %>
+    <% @errors.each do |error| %>
+    <ul>
+      <li><%= error %> </li>
+    </ul>
+    <% end %>
+  <% end %>
   </body>
 </html>
