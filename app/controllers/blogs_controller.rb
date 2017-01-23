@@ -6,13 +6,14 @@ class BlogsController < ApplicationController
 
   #GET; form for new blog
   def new
+
   end
 
   def create
     @blog = Blog.new(blog_params)
     @blog.save
 
-    redirect_to @blog
+    redirect_to action: 'show', id: @blog.id
   end
 
   def show
