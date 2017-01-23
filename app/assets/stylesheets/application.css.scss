@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ html {
+   background: image-url('DSC_0011_Fotor.jpg') no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+
+.no_dot_list {
+  list-style-type:none;
+
+}
+h3  {
+  color: rgb(208, 138, 34);
+  text-shadow: 2px 2px rgba(83, 99, 85, 0.45);
+}
+
+.main_blog {
+  background-color: rgba(0, 0, 0, .2);
+  /*border-style: solid;
+  border-bottom-color: rgba(23, 30, 194, 0.8);*/
+  width: 50%;
+  height: 250px;
+  position: relative;
+}
+
+.time_submitted {
+float: right;
+font-size: 60%;
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+.blog_title {
+  font-size: 120%;
+  font-weight: bold;
+}
+.blog_body  {
+  /*margin-left: 0;*/
+  /*width: 75%;*/
+  background-color: rgba(79, 176, 224, 0.35);
+  height: 50px;
+  font-size: 80%;
+}
+
+.blog_full{
+  float: left;
+  width: 75%;
+  height: 300px;
+  border-style: dotted;
+  margin-top: 80px;
+  position: relative;
+}
+
+.nav_bar {
+  float: right;
+}
+.home_links {
+  float: left;
+  margin: 5px;
+  /*border-style: solid;*/
+}

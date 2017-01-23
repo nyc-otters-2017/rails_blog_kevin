@@ -7,10 +7,10 @@
   <body>
 
   <div class="blog_full">
-    <ul class='no_dot_list'>
-      <li><h4><%= @blog.title %></4> </li>
 
-      <li class="blog_body"> <%= @blog.body %> </li>
+      <h4><%= @blog.title %></4>
+
+      <p class="blog_body"> <%= @blog.body %> </li>
 
       <div class="time_submitted">
         <p class="home_links"> <%=@blog.submitted%> <%= time_ago_in_words(@blog.created_at)%> ago. </p>
@@ -21,7 +21,7 @@
         data: { confirm: 'Are you sure?' } %> </p>
       </div>
 
-    </ul>
+
   </div>
 
   <br>
@@ -32,5 +32,6 @@
     </ul>
     <% end %>
   <% end %>
+
   </body>
 </html>

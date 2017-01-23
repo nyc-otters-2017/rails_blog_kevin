@@ -1,17 +1,28 @@
 
     <title>This is the blog index</title>
 
+<body id='background'>
 
-    <h3>All Blogs</h3>
+  <h3>All Blogs</h3>
+<center>
+  <div class="" style="">
 
     <% @blogs.each do |blog| %>
-    <div class="one_blog">
-      <ul class="no_dot_list">
-        <li><h4> <a href="/blogs/<%=blog.id%>"><%= blog.title %></a></h4></li>
-        <li> <%= blog.body %> </li>
-        <li> <%=blog.submitted%> <%= time_ago_in_words(blog.created_at) %> ago.</li>
-        <br>
-      </ul>
-    </div>
+    <div class="main_blog">
+      <p class="blog_title">
+        <a href="/blogs/<%=blog.id%>"><%= blog.title %></a>
+      </p>
+      <p>
+        <%= blog.body %>
+      </p>
 
+      <p class="time_submitted">
+         <%=blog.submitted%> <%= time_ago_in_words(blog.created_at) %> ago.
+      <p>
+    </div>
     <% end %>
+
+  </div>
+</center>
+
+</body>
